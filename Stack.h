@@ -37,6 +37,17 @@ inline Stack<T>::Stack()
 }
 
 template<typename T>
+inline Stack<T>::~Stack()
+{
+	struct node<T>* temp = head->next;
+	while (head) {
+		delete head;
+		head = temp;
+		temp = head->next;
+	}
+}
+
+template<typename T>
 inline int Stack<T>::size()
 {
 	return length;
