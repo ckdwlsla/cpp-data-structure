@@ -7,6 +7,9 @@ template<typename T>
 struct node {
 	struct node *next;
 	T val;
+	~node() {
+		std::cout << "delete" << endl;
+	}
 };
 
 template<typename T>
@@ -38,9 +41,13 @@ inline Stack<T>::Stack()
 template<typename T>
 inline Stack<T>::~Stack()
 {
-	for (struct node<T> *ptr = head; head; head = head->next) {
-		delete ptr;
+	struct node<T> *ptr;
+	while (head) {
+		ptr = head->next;
+		delete head;
+		head = ptr;
 	}
+	delete ptr;
 }
 
 template<typename T>
