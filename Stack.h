@@ -39,11 +39,8 @@ inline Stack<T>::Stack()
 template<typename T>
 inline Stack<T>::~Stack()
 {
-	struct node<T>* temp = head->next;
-	while (head) {
-		delete head;
-		head = temp;
-		temp = head->next;
+	for (struct node<T> ptr = head; head; head = head->next) {
+		delete ptr;
 	}
 }
 
