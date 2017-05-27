@@ -17,6 +17,7 @@ private:
 
 public:
 	Stack();
+	~Stack();
 	int size();
 	bool empty();
 	T top();
