@@ -23,8 +23,6 @@ public:
 	void push(T x);
 	void pop();
 	void print();
-	
-
 };
 
 #endif // ! STACK_H
@@ -98,4 +96,3 @@ inline bool Stack<T>::empty()
 {
 	return length == 0;
 }
-
