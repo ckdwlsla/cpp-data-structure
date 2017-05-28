@@ -27,9 +27,6 @@ public:
 	void pop();
 	void print();
 };
-
-
-
 #endif // !QUEUE_H
 
 template<typename T>
