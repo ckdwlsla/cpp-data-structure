@@ -15,7 +15,6 @@ public:
 	int size();
 	void print();
 	T peek();
-	
 private:
 	std::vector<T> _v;
 	std::set<T> _s;
